@@ -1,0 +1,52 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  border: 0;
+}
+
+body {
+  padding: 20px;
+  background-color: rgb(31, 30, 30);
+}
+
+.task {
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: rgb(233, 230, 230);
+}
+
+#gallery {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+
+#gallery img {
+  width: 300px;
+  height: auto;
+}
+
+#counter {
+  display: flex;
+  justify-content: space-around;
+}
+
+button[data-action] {
+  padding: 10px;
+    background-color: rgb(207, 207, 207);
+  border-radius: 5px;
+}
+
+#validation-input {
+  border: 3px solid #bdbdbd;
+}
+
+#validation-input.valid {
+  border-color: #4caf50;
+}
+
+#validation-input.invalid {
+  border-color: #f44336;
+}
