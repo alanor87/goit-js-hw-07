@@ -30,4 +30,5 @@ function createBoxes() {
 function destroyBoxes() {
     parentDiv.innerHTML = '';
     boxesNumber.value = '';
+    metrics = 30;
 }
