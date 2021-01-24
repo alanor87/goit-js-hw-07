@@ -13,20 +13,21 @@ function random_rgb() {
 }
 
 function createBoxes() {
-    parentDiv.innerHTML = '';
+    const childrenCount = boxesNumber.value;
+    destroyBoxes();
     const childDivCollection = [];
-    for (let i = 0, metrics = 30; i < boxesNumber.value; i++, metrics += 10) {
+    for (let i = 0, metrics = 30; i < childrenCount; i++, metrics += 10) {
         const newDiv = document.createElement('div');
         newDiv.style.width = metrics + 'px';
         newDiv.style.height = metrics + 'px';
         newDiv.style.backgroundColor = random_rgb();
-        console.log(newDiv.style.backgroundColor);
         childDivCollection.push(newDiv);
     }
     parentDiv.append(...childDivCollection);
-
+    boxesNumber.value = '';
 }
 
 function destroyBoxes() {
-    parentDiv.innerHTML = '';
+    [...parentDiv.children].forEach(child => child.remove());
+    boxesNumber.value = '';
 }
